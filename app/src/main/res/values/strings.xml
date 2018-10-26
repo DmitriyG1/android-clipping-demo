@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">Clipping Demo</string>
+
+    <string name="demo_title_star">PorterDuff VS ClipPath</string>
+    <string name="demo_title_canvas_clip_path">Canvas.clipPath</string>
+    <string name="demo_title_porter_duff_hardware">PorterDuff Hardware</string>
+    <string name="demo_title_porter_duff_software">PorterDuff Software</string>
+    <string name="demo_title_clip_to_outline">View.clipToOutline</string>
+
+    <string name="clip_path_star_title">Canvas.clipPath</string>
+    <string name="porter_duff_star_title">PorterDuff Hardware</string>
+
+    <string name="navigation_drawer_close">Close menu</string>
+    <string name="navigation_drawer_open">Open menu</string>
+
+    <string name="menu_page_1">Главная</string>
+    <string name="menu_page_2">Код</string>
+
+    <string name="button_test">У кнопки должна быть тень</string>
+
+    <string name="demo_clip_path_page1">Плюсы
+\n- Работает на версиях до/после Lollipop
+\n- Хорошая производительность
+\n
+\nМинусы
+\n- Нет сглаживания
+</string>
+    <string name="demo_clip_path_page2">override fun dispatchDraw(canvas: Canvas) {
+\n    canvas.clipPath(path)
+\n    super.dispatchDraw(canvas)
+\n}
+</string>
+
+    <string name="demo_porter_duff_hardware_page1">Плюсы
+\n- Работает на версиях до/после Lollipop
+\n- Хорошая производительность
+\n
+\nМинусы
+\n- Иногда происходит мерцание, если в контейнере два View и у каждого меняется Alpha. Мерцание не замечено в версии Android до Lollipop.
+    </string>
+    <string name="demo_porter_duff_hardware_page2">paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+\n      color = ContextCompat.getColor(context, android.R.color.white)
+\n      xfermode = PorterDuffXfermode(PorterDuff.Mode.CLEAR)
+\n    }
+\n
+\n override fun dispatchDraw(canvas: Canvas) {
+\n    val saveCount = canvas.saveLayer(0f,
+\n      0f,
+\n      width.toFloat(),
+\n      height.toFloat(),
+\n      null,
+\n      Canvas.ALL_SAVE_FLAG)
+\n
+\n    super.dispatchDraw(canvas)
+\n
+\n    canvas.drawPath(path, paint)
+\n    canvas.restoreToCount(saveCount)
+\n  }</string>
+
+
+    <string name="demo_porter_duff_software_page1">Плюсы
+\n-Работает на версиях до/после Lollipop
+\n
+\nМинусы
+\n- Плохая производительность
+\n- Не отображается тень на кнопках
+\n- Работают не все виды PorterDuff.Mode
+
+</string>
+    <string name="demo_porter_duff_software_page2">paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+\n      color = ContextCompat.getColor(context, android.R.color.white)
+\n      xfermode = PorterDuffXfermode(PorterDuff.Mode.CLEAR)
+\n    }
+\n
+\noverride fun dispatchDraw(canvas: Canvas) {
+\n    super.dispatchDraw(canvas)
+\n    canvas.drawPath(path, paint)
+\n  }</string>
+
+
+    <string name="demo_clip_to_outline_page1">Извините, работает только на Lollipop и выше</string>
+    <string name="demo_clip_to_outline_page2">Извините, работает только на Lollipop и выше</string>
+
+    <string name="stuff">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</string>
+</resources>

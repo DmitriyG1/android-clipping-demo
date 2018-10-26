@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="demo_clip_to_outline_page1">Плюсы
+\n-Хорошая производительность
+\n
+\nМинусы
+\n- Работает на Lollipop и выше
+\n- Только прямоугольник, овал, и прямоугольник со скругленными краями
+</string>
+    <string name="demo_clip_to_outline_page2">class RoundRectDrawable extends Drawable {
+\n  @Override
+\n  public void getOutline(Outline outline) {
+\n    outline.setRoundRect(bounds, radius);
+\n  }
+\n}
+\n
+\nclass ClipToOutlineDemo : FrameLayout {
+\ninit {
+\n    setBackgroundDrawable(RoundRectDrawable(color, cornerRadius))
+\n    clipToOutline = true
+\n  }
+\n}</string>
+</resources>

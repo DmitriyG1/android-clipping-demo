@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.appkode.clippingdemo.ui.outline.ClipToOutlineDemo
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/page_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/content_demo_clip_to_outline"/>
+
+</ru.appkode.clippingdemo.ui.outline.ClipToOutlineDemo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_canvas_star"
+                android:title="@string/demo_title_star" />
+        <item
+            android:id="@+id/nav_canvas_clippath"
+            android:title="@string/demo_title_canvas_clip_path" />
+        <item
+            android:id="@+id/nav_porter_duff_hardware"
+            android:title="@string/demo_title_porter_duff_hardware" />
+        <item
+            android:id="@+id/nav_porter_duff_software"
+            android:title="@string/demo_title_porter_duff_software" />
+        <item
+            android:id="@+id/nav_clip_to_outline"
+            android:title="@string/demo_title_clip_to_outline" />
+    </group>
+
+</menu>

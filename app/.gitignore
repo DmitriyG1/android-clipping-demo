@@ -1,0 +1,17 @@
+.DS_Store
+*.iml
+*.dex
+*.class
+*.apk
+*.ap_
+bin/
+gen/
+.gradle/
+.externalNativeBuild
+/build
+/captures
+/.idea/workspace.xml
+/.idea/libraries
+/.idea/caches
+/.idea/assetWizardSettings.xml
+/local.properties
