@@ -1,4 +1,4 @@
-# android-clipping-demo
+# Отсечение, закругление углов в Android
 
 Обзор различных подходов отсечения (clipping) в Android.
 
